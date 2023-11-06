@@ -1,2 +1,1 @@
-# LSM_Dactilogia
 # EntrenadorLSM
