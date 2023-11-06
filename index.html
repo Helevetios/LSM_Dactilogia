@@ -13,32 +13,37 @@
 
   <section id="demos" class="invisible m-5">
 
-    <h2 class="text-center">Entrenador de señas</h2>
+    <h2 class="text-center">Reconocedor de señas</h2>
 
     <p class="text-center" id="status">Cargando modelos...</p>
+
+    <div class="dropdown text-center">
+      <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Lista de Vocales
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">A</a></li>
+        <li><a class="dropdown-item" href="#">E</a></li>
+        <li><a class="dropdown-item" href="#">I</a></li>
+        <li><a class="dropdown-item" href="#">O</a></li>
+        <li><a class="dropdown-item" href="#">U</a></li>
+      </ul>
+    </div>
 
     <div id="liveView" class="videoView">
       <button id="webcamButton" class="btn btn-dark mdc-button mdc-button--raised m-5">
         <span class="mdc-button__ripple"></span>
         <span class="mdc-button__label">HABILITAR WEBCAM</span>
       </button>
-      <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 80vh;">
+      <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 70vh;">
         <video id="webcam" style="position: absolute;" autoplay playsinline></video>
         <canvas class="output_canvas" id="output_canvas" style="position: absolute;"></canvas>
       </div>
     </div>
 
-    <p class="text-center" id="data_collect" style="display: none;">Sin datos para entrenar</p>
-
     <p class="text-center" id="predict" style="display: none;"></p>
 
-    <div class="mb-5" style="display: none;" id="buttons">
-      <button class="dataCollector btn btn-dark" data-1hot="0" data-name="Palma">Palma</button>
-      <button class="dataCollector btn btn-dark" data-1hot="1" data-name="Sign">Capturar Seña</button>
-      <button class="btn btn-dark" id="train">Entrenar y probar</button>
-      <button class="btn btn-dark" id="reset">Reiniciar</button>
-      <button class="btn btn-dark" id="guardar">Guardar</button>
-    </div>
   </section>
 
   <script type="module" src="./script.js"></script>
